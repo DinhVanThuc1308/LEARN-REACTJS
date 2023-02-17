@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+<body>
+    <div class="Container">
+        <h1>Tên Sinh Viên</h1>
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="name">Họ Và Tên:</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="Nhập tên sinh viên"></td>    
+                </tr>
+            <br>
+            <tr>
+                <td><label for="">Ngày sinh:</label></td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Giới tính:</label>
+                </td>
+                <td>
+                    <input name="gender" type="radio" value="Nam" />Nam
+                    <input name="gender" type="radio" value="Nữ" />Nữ
+                    <input name="gender" type="radio" value="Khác" />Khác
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="quequan">Quê quán:</label>
+                </td>
+                <td>
+                    <select id="quequan" name="quequan">
+                        <option value="">--Chọn quê quán--</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="hochiminh">Hồ Chí Minh</option>
+                        <option value="danang">Đà Nẵng</option>
+                        <option value="haiphong">Hải Phòng</option>
+                        <option value="hue">Huế</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Sở Thích:</label>    
+                </td>
+                <td>
+                    <input type="checkbox" name="sothich" value="Đá bóng" />Đá bóng
+                    <input type="checkbox" name="sothich" value="Du lịch" />Du lịch
+                    <input type="checkbox" name="sothich" value="Xem Phim" />Xem Phim
+                    <input type="checkbox" name="sothich" value="Ẩm Thực" />Ẩm Thực
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="favorite-color">Màu yêu thích:</label>
+                </td>
+                <td>
+                    <input type="color" id="favorite-color" name="favorite-color" value="#ff0000">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="Nhập email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Facebook">Trang Facebook:</label>
+                </td>
+                <td>
+                    <input type="url" name="Facebook" id="Facebook" placeholder="Nhập link facebook">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="class">Lớp:</label>
+                </td>
+                <td>
+                    <select id="class" name="class">
+                        <option value="">--Lớp CNTT--</option>
+                        <option value="CNTT1">CNTT1</option>
+                        <option value="CNTT2">CNTT2</option>
+                        <option value="CNTT3">CNTT3</option>
+                        <option value="CNTT4">CNTT4</option>
+                        <option value="CNTT5">CNTT5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="account">Tên đăng nhập:</label>
+                </td>
+                <td>
+                    <input type="text" name="account" id="account" placeholder="Nhập tên đăng nhập">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Mật khẩu:</label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Ảnh thẻ:</label>
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td>Mô tả:</td>
+                <td>
+                    <textarea name="mota" id="mota" cols="30" rows="2"></textarea>
+                </td>     
+            </tr>
+            <tr>
+                <td><input type="button" value="Gửi"></td>
+                <td><input type="button" value="Nhập lại"></td>
+            </tr>
+
+            </table>
+        </form>
+    </div>
+    
+</body>
+</html>
