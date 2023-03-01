@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Thực hành 4</title>
+  </head>
+  <body>
+    <div class="container bg-light">
+      <h1 class="text-center">Thông tin giới thiệu</h1>
+      <form action="/action_page.php">
+        <div class="mb-3">
+          <label for="name" class="form-label">Tên:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Nhập vào tên"
+            name="name"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Ngày sinh:</label>
+          <input type="date" class="form-control" id="date" name="date" />
+        </div>
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-3 pt-0">Giới tính:</legend>
+          <div class="col-sm-9">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="male"
+                value="2"
+                checked
+              />
+              <label class="form-check-label" for="male"> Nam </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="human"
+                value="1"
+              />
+              <label class="form-check-label" for="human"> Nữ </label>
+            </div>
+          </div>
+        </fieldset>
+        <!-- end giới tính-->
+        <div class="mb-3">
+          <label for="name" class="form-label">Số điện thoại:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            placeholder="Nhập vào số điện thoại"
+            name="phone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Địa chỉ:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            placeholder="Nhập vào địa chỉ"
+            name="address"
+          />
+        </div>
+        <h1 class="text-center">Thông tin tài khoản</h1>
+        <div class="mb-3">
+          <label for="name" class="form-label">Tên đăng nhập:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Nhập vào tên đăng nhập"
+            name="username"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Mật khẩu:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Nhập vào mật khẩu"
+            name="password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</html>
