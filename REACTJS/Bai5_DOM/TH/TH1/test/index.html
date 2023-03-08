@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>TO do list</h1>
+    <form action="">
+      <input type="text" placeholder="Enter new todo" />
+      <button type="submit">Add Todo</button>
+    </form>
+    <ul></ul>
+    <script>
+      const form = document.querySelector("form");
+      const todos = ["learn JavaScript", "DOM", "learn English"];
+      const todoList = document.querySelector("ul");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const input = document.querySelector("input");
+        const value = input.value;
+        todos.push(value);
+        input.value = "";
+        render();
+      });
+      function handleDelete(index) {
+        todos.splice(index, 1);
+        render();
+      }
+      function render() {
+        a = todos.map(function (todo) {
+          return `
+            <li> <span>${todo}</span>
+                <button id = id="edit">Edit </button>
+                <button id = id="delete">Delete </button>
+                </li>
+            `;
+        });
+        todoList.innerHTML = a.join("");
+        const deleteButton = document.querySelectorAll("#delete");
+        for (let i = 0; i < deleteButton.length; i++) {
+          const deleteButton = deleteButton[i];
+          deleteButton.addEventListener("click", function (e) {
+            // e.preventDefault();
+            handleDelete(i);
+          });
+        }
+      }
+
+      function initialApp() {
+        render();
+      }
+      initialApp();
+    </script>
+  </body>
+</html>

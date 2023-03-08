@@ -16,21 +16,31 @@
 //   }
 // }
 
+// function checkUsersValid(goodUsers) {
+//   return function allUsersValid(submittedUsers) {
+//     for (let i = 0; i < submittedUsers.length; i++) {
+//       // var check = goodUsers.find((u) => u.id === submittedUsers[i].id);
+//       let check = goodUsers.find(function(u){
+//         return u.id === submittedUsers[i].id
+//       })
+//       if (!check) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   };
+// }
 function checkUsersValid(goodUsers) {
   return function allUsersValid(submittedUsers) {
-    for (let i = 0; i < submittedUsers.length; i++) {
-      // var check = goodUsers.find((u) => u.id === submittedUsers[i].id);
-      let check = goodUsers.find(function(u){
-        return u.id === submittedUsers[i].id
-      })
-      if (!check) {
-        return false;
-      }
-    }
-    return true;
+    return submittedUsers.every(function (submittedUsers) {
+      // Kiểm tra từng phần tử có trong mảng không
+      return goodUsers.some(function (goodUsers) {
+        // xem nó có nằm trong không
+        return goodUsers.id === submittedUsers.id;
+      });
+    });
   };
 }
-
 var goodUsers = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
 var testAllValid = checkUsersValid(goodUsers);
