@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 2</title>
+  </head>
+  <body>
+    <form action="">
+      <h3>Thông tin khoản vay</h3>
+      <table>
+        <tr>
+          <td colspan="5">1.Số tiền</td>
+          <td colspan="5"><input type="number" id="amount" /></td>
+        </tr>
+        <tr>
+          <td colspan="5">2.Lãi suất hàng năm(%)</td>
+          <td colspan="5">
+            <input type="number" id="interestRate" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">3.Số năm trả</td>
+          <td colspan="5">
+            <input type="number" id="payments" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <button onclick="calculateLoan()">Tính</button>
+    <form action="">
+      <h3>Thông tin thanh thoán</h3>
+      <table>
+        <tr>
+          <td colspan="5">4 Số tiền phải trả hàng tháng</td>
+          <td colspan="5">
+            <input type="number" id="monthlyPayment" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">5 Tổng số tiền phải trả</td>
+          <td colspan="5">
+            <input type="number" id="totalPayment" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">6 Tổng số tiền lãi</td>
+          <td colspan="5">
+            <input type="number" id="totalInterest" readonly />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
