@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JavaScript!</title>
-  </head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Bài tập 1</title>
+  </head>
   <body>
-    <h1>Todo list</h1>
-    <ul>
-      <li>Buy groceries</li>
-      <li>Feed the cat</li>
-      <li>Do laundry</li>
-    </ul>
+    <div class="container">
+      <form>
+        <h1 class="text-center">ĐO CHỈ SỐ (BMI)</h1>
+        <div class="mb-3">
+          <label for="chieu-cao" class="form-label">Chiều cao</label>
+          <input
+            type="input"
+            class="form-control"
+            id="chieu-cao"
+            value=""
+            placeholder="Nhập chiều cao m"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="can-nang" class="form-label">Cân nặng</label>
+          <input
+            type="text"
+            class="form-control"
+            id="can-nang"
+            value=""
+            placeholder="Nhập vào cân nặng KG"
+          />
+        </div>
+        <p>Giới tính:</p>
+        <div class="d-flex">
+          <!-- tạo radio button kiểm tra nam nữ -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+            />
+            <label class="form-check-label" for="male"> Nam </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+            />
+            <label class="form-check-label" for="female"> Nữ </label>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary p-3">Tính IBM</button>
+        </div>
+        <div class="result-box d-flex justify-content-center">
+          Kết quả của bạn là: <span class="result">25.4</span>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>

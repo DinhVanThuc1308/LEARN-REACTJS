@@ -21,7 +21,11 @@ canvas.addEventListener("mousemove", function (e) {
   }
   let { clientX, clientY } = e;
   let rect = canvas.getBoundingClientRect();
-  draw(clientX - rect.left - 30, clientY);
+  var mouseX;
+  var mouseY;
+  mouseX = e.clientX - rect.left;
+  mouseY = e.clientY - rect.top;
+  draw(mouseX, mouseY);
 });
 
 let colorPicker = [...document.querySelectorAll(".color-picker")];
