@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Document</title>
-<script src="script.js"></script>
-</head>
-<body>
-<div id="loading">
-<span >Loading...</span>
-</div>
-<h1>Registered Employees</h1>
-<table id="employees"></table>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="btn-1">
+      <button onclick="handleNext()">Next</button>
+    </div>
+
+    <div class="btn-2">
+      <button onclick="handleBack()">Back</button>
+    </div>
+  </body>
+
+  <script>
+    let limit = 5;
+    let page = 1;
+    function loadProducts(params) {
+      axios
+        .get(
+          `http://jsonplaceholder.typicode.com/users?_limit=${params.limit}&_page=${params.page}`
+        )
+        .then((res) => {
+          console.log(11, res.data);
+        });
+    }
+    loadProducts({
+      limit: limit,
+      page: page,
+    });
+
+    function handleNext() {
+      page = page + 1;
+
+      loadProducts({
+        limit: limit,
+        page: page,
+      });
+    }
+    function handleBack() {
+      if (page == 1) return;
+
+      page = page - 1;
+      loadProducts({
+        limit: limit,
+        page: page,
+      });
+    }
+  </script>
 </html>
