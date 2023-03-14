@@ -44,14 +44,45 @@ function handleNext() {
     page: page,
   });
 }
+function handleDelete(index) {
+  todos.splice(index, 1);
+  render();
+}
+function handleEdit(index) {
+  const input = document.querySelector("input");
+  input.value = todos[index].title;
+  globalIndex = index;
+  render();
+}
 
 function render() {
   const liElement = todos.map(function (todo) {
     return `
-            <li>${todo.title}</li>
+            <li><span>${todo.title}</span>
+            <button id="edit">Edit</button>
+            <button id="delete">Delete</button></li>
         `;
   });
   ulElement.innerHTML = liElement.join("");
+  const deleteButtons = document.querySelectorAll("#delete");
+
+  for (let index = 0; index < deleteButtons.length; index++) {
+    const deleteButton = deleteButtons[index];
+    deleteButton.addEventListener("click", function () {
+      handleDelete(index);
+    });
+  }
+
+  const editButtons = document.querySelectorAll("#edit");
+
+  for (let index = 0; index < editButtons.length; index++) {
+    const editButton = editButtons[index];
+    editButton.addEventListener("click", function () {
+      save.innerHTML = "Save";
+      handleEdit(index);
+      console.log("Index hàm edit:", index);
+    });
+  }
 }
 getTodo();
 function addTodo(todo) {
