@@ -1,16 +1,21 @@
-import axios from 'axios';
+// Bài Thực hành 2
 
-const user = {
-  name: 'hungnv0902'
-}
 
-async function getUserProfile() {
-  try {
-    const githubUser = await axios.get(`https://api.github.com/users/${user.name}`);
-    console.log(githubUser.data)
-  } catch (err: any) {
-    console.log(err.message)
-  }
-}
+// import axios from 'axios';
 
-getUserProfile();
+// const user = {
+//   name: 'hungnv0902'
+// }
+
+// async function getUserProfile() {
+//   try {
+//     const githubUser = await axios.get(`https://api.github.com/users/${user.name}`);
+//     console.log(githubUser.data)
+//   } catch (err: any) {
+//     console.log(err.message)
+//   }
+// }
+
+// getUserProfile();
+
+
